@@ -1,4 +1,4 @@
-OPDRACHT 2 - Virtual Machines + Netmiko
+# OPDRACHT 2 - Virtual Machines + Netmiko
 
 - Installeer de virtuele machine voor de cursus via Virtualbox => zie lab 1.1.2
 
