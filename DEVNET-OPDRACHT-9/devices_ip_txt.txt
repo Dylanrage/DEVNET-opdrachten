@@ -1,0 +1,61 @@
+### RULES
+inventory_list         = []    
+inventory_dict         = {}  #### {"interface": "gi0/1", "ip_address": "1.2.2.1", "subnet_mask": "255.255.255.0", "device": "dv"
+interface_dict         = {}  #### {"interface": "gi0/1", "ip_address": "1.2.2.1", "subnet_mask": "255.255.255.0"}
+interface_list         = []
+dev_dict               = {}  #### {"device": {"dev_name": "n", "device_role": "r" , interfaces": interface_dict}}
+dev_dict_1D            = { COL_A: "D", COL_B: "R", COL_C:"If" , COL_D: "IP", COL_E: "SM" }
+dev_list               = []  #### [dev_dict]  
+dev_list_1D            = []  
+dev_list_2D            = [dev_list]
+rack_struc             = {}  #### {dev_dict_list}
+rack_struc["rack"]     = []
+###
+rack_struc = {
+ "rack": [
+      { "device": { "dev_id": "D1" , "dev_name": "RTR1" , "role": "router"  ,      
+                   "interfaces": [   
+                     {"interface": "GigabitEhternet1" , "ipaddress": "10.0.1.1", "subnet_mask": "255.255.255.0"},
+                     {"interface": "GigabitEhternet2" , "ipaddress": "10.0.3.1", "subnet_mask": "255.255.255.0"},
+                     {"interface": "GigabitEhternet3" , "ipaddress": "10.0.4.1", "subnet_mask": "255.255.255.0"} 
+                   ]
+                 }
+      },
+      { "device": { "dev_id": "D2" , "dev_name": "MSLA" , "role": "distribution"  ,   
+                   "interfaces": [   
+                     {"interface": "VLAN1"  ,"ipaddress": "10.0.1.2" , "subnet_mask": "255.255.255.0"}, 
+                     {"interface": "VLAN2"  ,"ipaddress": "10.0.2.1" , "subnet_mask": "255.255.255.0"}, 
+                     {"interface": "VLAN20" ,"ipaddress": "10.0.20.1", "subnet_mask": "255.255.255.0"} 
+                   ]     
+                 }
+      },
+      { "device": { "dev_id": "D3" , "dev_name": "SWB" ,  "role": "access"  ,
+                   "interfaces": [   
+                     {"interface": "VLAN3" ,"ipaddress": "x7", "subnet_mask": "255.255.255.0"}, 
+                     {"interface": "VLAN4" ,"ipaddress": "x8", "subnet_mask": "255.255.255.0"}, 
+                     {"interface": "VLAN5" ,"ipaddress": "x9", "subnet_mask": "255.255.255.0"} 
+                   ] 
+                 }
+      }
+   ]
+}
+
+print('------1---------')
+print(rack_struc)
+#print('------1A--------')
+#js_groups = json.dumps(rack_struc)
+#print(json.dumps(rack_struc, indent=2))
+
+print('------2---------')
+for g in rack_struc["rack"]:
+    print('------2A--------')
+    print(type(g))
+    print(g)
+    print(g["device"]["dev_name"])
+    for p in g["device"]["interfaces"]:
+        print(p["ipaddress"])
+            
+print('------3---------')
+print(g["device"].keys())
+print('------3A---------')
+print(g["device"]["interfaces"][0].keys())

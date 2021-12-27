@@ -1,0 +1,71 @@
+groups_struc = {
+ "groups": [
+      { "group": {"group_id": "G-A" , "group_name": "DEVASC_A" ,    
+        "members": [   
+                     {"person_id": "P-1" , "person_name": "x1", "email": "e1@student.odisee.be"},
+                     {"person_id": "P-2" , "person_name": "x2", "email": "e2@student.odisee.be"},
+                     {"person_id": "P-3" , "person_name": "x3", "email": "e3@student.odisee.be"} 
+                 ]
+        }
+      },
+      { "group": {"group_id": "G-B" , "group_name": "DEVASC_B" ,    
+        "members": [   
+                     {"person_id": "P-4" ,"person_name": "x4", "email": "e4@student.odisee.be"}, 
+                     {"person_id": "P-5" ,"person_name": "x5", "email": "e5@student.odisee.be"}, 
+                     {"person_id": "P-6" ,"person_name": "x6", "email": "e6@student.odisee.be"} 
+                 ]     
+        }
+      },
+      { "group": {"group_id": "G-C" , "group_name": "DEVASC_C" ,    
+        "members": [   
+                     {"person_id": "P-7" ,"person_name": "x7", "email": "e7@student.odisee.be"}, 
+                     {"person_id": "P-8" ,"person_name": "x8", "email": "e8@student.odisee.be"}, 
+                     {"person_id": "P-9" ,"person_name": "x9", "email": "e9@student.odisee.be"} 
+                 ] 
+        }
+      }
+   ]
+}
+
+---
+groups:
+- group:
+    group_id: G-A
+    group_name: DEVASC_A
+    members:
+    - email: e1@student.odisee.be
+      person_id: P-1
+      person_name: x1
+    - email: e2@student.odisee.be
+      person_id: P-2
+      person_name: x2
+    - email: e3@student.odisee.be
+      person_id: P-3
+      person_name: x3
+- group:
+    group_id: G-B
+    group_name: DEVASC_B
+    members:
+    - email: e4@student.odisee.be
+      person_id: P-4
+      person_name: x4
+    - email: e5@student.odisee.be
+      person_id: P-5
+      person_name: x5
+    - email: e6@student.odisee.be
+      person_id: P-6
+      person_name: x6
+- group:
+    group_id: G-C
+    group_name: DEVASC_C
+    members:
+    - email: e7@student.odisee.be
+      person_id: P-7
+      person_name: x7
+    - email: e8@student.odisee.be
+      person_id: P-8
+      person_name: x8
+    - email: e9@student.odisee.be
+      person_id: P-9
+      person_name: x9
+
